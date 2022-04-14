@@ -33,6 +33,10 @@
 
 ## 2 - Provider configuration
 
-- Redux state Provider 
-- i18n translations Provider 
-- BrowserRouter Provider
+- Redux state Provider ✓ 
+- i18n translations Provider ✓
+- BrowserRouter Provider ✓
+
+## 3 - Create all routes
+
+

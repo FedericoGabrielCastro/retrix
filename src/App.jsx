@@ -12,7 +12,7 @@ import { CustomRoutes } from './routes/customRoutes'
 const App = () => {
     
     return (
-        <Provider store={store}>
+        <Provider store={store} data-testid="appRender">
             <I18nextProvider i18n={i18next}>
                 <CustomRoutes />
             </I18nextProvider>
