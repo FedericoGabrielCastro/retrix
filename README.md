@@ -38,5 +38,4 @@
 - BrowserRouter Provider ✓
 
 ## 3 - Create all routes
-
-
+## 4 - Create Home Page 

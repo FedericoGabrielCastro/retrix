@@ -1,0 +1,62 @@
+@import url("../abstracts/colors.css");
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    transition: all 2s;
+    transform: skew(-20deg);
+    transition: 2s;
+}
+.content::before{
+    content: '';
+    display: flex;
+    padding: 30px;
+    opacity: 0;
+    width: 15%;
+    position: relative;
+}
+.content:hover::before {
+    opacity: 1;
+    position: absolute;
+    
+}
+.completeButton {
+    text-decoration: none;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
+    width: 100%;
+}
+
+.titleBtn {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+}
+.decoreBtn {
+    padding: 10px;
+    overflow: hidden;
+    background-color: var(--color-golden);
+}
+.content:nth-child(2) .completeButton .decoreBtn{
+    background-color: var(--color-green);
+}
+.content:nth-child(3) .completeButton .decoreBtn{
+    background-color: var(--color-lightBlue);
+}
+.content:nth-child(4) .completeButton .decoreBtn{
+    background-color: var(--color-blue);
+}
+.content:nth-child(5) .completeButton .decoreBtn{
+    background-color: var(--color-purple);
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        transform: skew(0deg);
+        width: 80%;
+        padding: 10px
+    }
+}

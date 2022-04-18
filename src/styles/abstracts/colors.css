@@ -1,3 +1,10 @@
 :root {
-    --color-blue: #337ab7
+    --color-bgDefault: #ccc;
+    --color-white: #ffffff;
+    --color-gray: #293133;
+    --color-green: #008000;
+    --color-lightBlue: #337Ab7;
+    --color-blue: #021988;
+    --color-purple: #6600A1;
+    --color-golden: #EFB810;
 }

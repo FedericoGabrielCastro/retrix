@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import LazyLoadingSpinner from "../components/LazyLoadingSpinner/LazyLoadingSpinner";
 
@@ -33,28 +33,26 @@ export const manageRoutes = [
 export const CustomRoutes = () => {
 
     return (
-        <BrowserRouter >
-            <Routes>
-                {
-                    manageRoutes.map((item, index) => {
-                        
-                        return <Route 
-                            key={index} 
-                            path={item.path} 
-                            element={
-                                <Suspense fallback={ <LazyLoadingSpinner /> } >
-                                    <item.renderPage/>
-                                </Suspense>
-                            }
-                        />
-                    })
-                }
-                <Route path="*" element={
-                    <Suspense fallback={ <LazyLoadingSpinner /> } >
-                        <ErrorPage/>
-                </Suspense>
-                }/>
-            </Routes>
-        </BrowserRouter>
+        <Routes data-testid="browserouter">
+            {
+                manageRoutes.map((item, index) => {
+                    
+                    return <Route 
+                        key={index} 
+                        path={item.path} 
+                        element={
+                            <Suspense fallback={ <LazyLoadingSpinner /> } >
+                                <item.renderPage/>
+                            </Suspense>
+                        }
+                    />
+                })
+            }
+            <Route path="*" element={
+                <Suspense fallback={ <LazyLoadingSpinner /> } >
+                    <ErrorPage/>
+            </Suspense>
+            }/>
+        </Routes>
     )
 }
